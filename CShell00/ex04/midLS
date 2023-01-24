@@ -1,0 +1,21 @@
+#########################################
+# File: midLS		 	
+# Date Created: 23/01/23	
+# Author: Sam Catcheside
+#			
+#########################################
+# Description
+#
+# Uses the ls command with arguments:
+# ls - list
+#
+# p - Stream output format accross page, comma delimited 
+#
+# t - sort by time modified
+#
+# m - Write slash after filename if file is directory
+#
+# Usage: bash path/to/midLS 
+#
+#########################################
+ls -ptm

@@ -1,0 +1,15 @@
+# Shell script: Clean
+# Author: Sam Catcheside
+# Date created: 23/01/2023
+#
+# search files in directory and subdirectories
+# name ending with ~ or a name starting or ending with #
+#
+# The command first tries to find a match with a string ending with ~ and then prints and deletes-
+# - the results. Then it tries to match a string starting with # and ending with # with * -
+# - representing the bits in the middle
+# Each new field/name to match for is separated with the -or operator
+#
+#
+############################
+find . -name "*~" -print -delete -or -name "#*#" -print -delete

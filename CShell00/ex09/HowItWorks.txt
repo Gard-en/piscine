@@ -1,0 +1,9 @@
+Magic File Syntax
+
+Offset	Type	Test	Message
+42	string	42 magic	This is a 42 file
+
+Compile with: file -C -m $magicFile
+Use with: file -m $magicFile.mgc $fileToTest
+
+

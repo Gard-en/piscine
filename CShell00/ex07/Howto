@@ -1,0 +1,4 @@
+1. copy a to b
+2. patch -n b>sw.diff
+3. ???
+4. done
