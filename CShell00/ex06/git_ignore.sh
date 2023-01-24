@@ -9,4 +9,4 @@
 # check-ignore | the argument that checks the gitignore file
 # *            | * for all 
 ##################################
-git ls-files -o -i
+git ls-files -o -i --exclude-standard | cat -e
