@@ -13,9 +13,9 @@
 #include <unistd.h>
 
 /*
-		hundred = i / 100;
-		tenth = (i / 10) % 10;
-		unit = i % 10;
+		hundreds = i / 100;
+		tens = (i / 10) % 10;
+		units = i % 10;
 */
 
 void	ft_print_comb(void)

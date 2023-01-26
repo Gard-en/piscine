@@ -18,7 +18,17 @@ void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
-void	ft_print_number(int nums[])
+/*
+		Tens = (i / 10) % 10;
+		Units = i % 10;
+
+		Logic:
+		Iterate through nums array, splitting known 2-digit integers into individual
+		characters in a char array.
+
+		int 23 -> {'2', '3'}
+*/
+void	ft_putnbr(int nums[])
 {
 	int		i;
 	char	output[2];
@@ -44,26 +54,39 @@ void	ft_print_number(int nums[])
 	}
 }
 
+/*
+		Logic:
+		int array (a, b)
+		
+		a = 0, b = 0
+
+		While a < 100 loop
+
+		if b <= 99 
+			a = a + 1;
+			b = a + 1;
+
+		b = b + 1;	
+*/
+
 void	ft_print_comb2(void)
 {
-	int		series[3];
+	int		series[2];
 	char	output[6];
 
 	series[0] = 0;
 	series[1] = 0;
-	series[2] = 0;
-	while (series[1] < 10)
+	while (series[0] < 100)
 	{
-		ft_print_number(series);
+		ft_putnbr(series);
 		ft_putchar(',');
 		ft_putchar(' ');
-		if (series[2] >= 99)
+		if (series[1] >= 99)
 		{
-			series[1]++;
-			series[2] = series[1];
+			series[0]++;
+			series[1] = series[0];
 		}
-		series[2]++;
-		series[0]++;
+		series[1]++;
 	}
 }
 
