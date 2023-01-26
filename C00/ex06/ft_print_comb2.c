@@ -13,33 +13,60 @@
 #include <stdio.h>
 #include <unistd.h>
 
-void	ft_print_comb2(void)
+void	ft_putchar(char c)
 {
-	int		a;
-	int		b;
-    int     i;
+	write(1, &c, 1);
+}
 
-	char	series[5];
+void	ft_print_number(int nums[])
+{
+	int		i;
+	char	output[2];
 
-	a = 00;
-	b = 00;
-    i = 00;
-
-
-	while (i < 1000)
+	i = 0;
+	while (i < 2)
 	{
-		while (a < 100)
+		if (nums[i] < 9)
 		{
-            a = 0+i;
-            while (b < 10)
-            {
-                b++;
-            }
-			a++;
+			ft_putchar('0');
+			ft_putchar(nums[i] + '0');
+		}
+		else
+		{
+			ft_putchar((nums[i] / 10) % 10 + '0');
+			ft_putchar(nums[i] % 10 + '0');
+		}
+		if (i == 0)
+		{
+			ft_putchar(' ');
 		}
 		i++;
 	}
 }
+
+void	ft_print_comb2(void)
+{
+	int		series[3];
+	char	output[6];
+
+	series[0] = 0;
+	series[1] = 0;
+	series[2] = 0;
+	while (series[1] < 10)
+	{
+		ft_print_number(series);
+		ft_putchar(',');
+		ft_putchar(' ');
+		if (series[2] >= 99)
+		{
+			series[1]++;
+			series[2] = series[1];
+		}
+		series[2]++;
+		series[0]++;
+	}
+}
+
 int	main(void)
 {
 	ft_print_comb2();
