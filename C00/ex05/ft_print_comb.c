@@ -12,29 +12,33 @@
 #include <stdio.h>
 #include <unistd.h>
 
+/*
+		series[1] = series[0] / 100; HUNDREDTHS
+		series[2] = (series[0] / 10) % 10; TENTHS
+		series[3] = series[0] % 10; UNITS
+*/
+
 void	ft_print_comb(void)
 {
-	int		i;
-	int		j;
-	int		k;
-	int		l;
-	char	output[4];
+	int		series[4];
+	char	output[5];
 
-	i = 0;
-	while (i < 1000)
+	series[0] = 0;
+	while (series[0] < 1000)
 	{
-		j = i / 100;
-		k = (i / 10) % 10;
-		l = i % 10;
-		if (j < k && k < l)
+		series[1] = series[0] / 100;
+		series[2] = (series[0] / 10) % 10;
+		series[3] = series[0] % 10;
+		if (series[1] < series[2] && series[2] < series[3])
 		{
-			output[0] = j + '0';
-			output[1] = k + '0';
-			output[2] = l + '0';
-			output[3] = ' ';
+			output[0] = series[1] + '0';
+			output[1] = series[2] + '0';
+			output[2] = series[3] + '0';
+			output[3] = ',';
+			output[4] = ' ';
 			write(1, &output[0], sizeof(output));
 		}
-		i++;
+		series[0]++;
 	}
 }
 
