@@ -13,9 +13,9 @@
 #include <unistd.h>
 
 /*
-		series[1] = series[0] / 100; HUNDREDTHS
-		series[2] = (series[0] / 10) % 10; TENTHS
-		series[3] = series[0] % 10; UNITS
+		hundred = i / 100;
+		tenth = (i / 10) % 10;
+		unit = i % 10;
 */
 
 void	ft_print_comb(void)
