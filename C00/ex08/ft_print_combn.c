@@ -10,6 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
+#include <stdio.h>
 
 /*
 	Start from the right and work your way left
@@ -20,6 +21,11 @@
 void	ft_putchar(char c)
 {
 	write(1, &c, 1);
+}
+
+void ft_putarray(char output[], int n)
+{
+	write(1, output, n);
 }
 
 void	ft_print_combn(int n)
@@ -40,9 +46,7 @@ void	ft_print_combn(int n)
 		else
 			n = n + 2;
 		
-		//ft_output(output, n);
-		write(1, output, n);
-		//printf("%d %s", n, output);
+		ft_putarray(output, n);
 		ft_putchar(',');
 		ft_putchar(' ');
 
@@ -57,5 +61,5 @@ void	ft_print_combn(int n)
 
 int	main(void)
 {
-	ft_print_combn(4);
+	ft_print_combn(2);
 }
