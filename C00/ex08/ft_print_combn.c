@@ -19,7 +19,7 @@
 
 void	ft_putchar(char c)
 {
-	write(1, &c, sizeof(c));
+	write(1, &c, 1);
 }
 
 void	ft_print_combn(int n)
@@ -27,23 +27,25 @@ void	ft_print_combn(int n)
 	char	output[11];
 	int		i;
 
-	if (!0 < n && n < 10)
+	if (n < 1 || n > 9)
 		return ;
 	*output = '0';
 	i = 0;
 	while (++i < n)
 		output[i] = output[i - 1] + 1;
-	output[n] = ',';
-	output[n + 1] = ' ';
 	while (*output <= 58 - n)
 	{
 		if (*output != 58 - n)
 			n = n + 0;
 		else
 			n = n + 2;
-		//write(1, output, n);
-		ft_putchar(*output);
+		
+		//ft_output(output, n);
+		write(1, output, n);
+		//printf("%d %s", n, output);
+		ft_putchar(',');
 		ft_putchar(' ');
+
 		i = n;
 		while (i--)
 			if (++output[i] <= 58 - n + i)
@@ -55,5 +57,5 @@ void	ft_print_combn(int n)
 
 int	main(void)
 {
-	ft_print_combn(3);
+	ft_print_combn(4);
 }

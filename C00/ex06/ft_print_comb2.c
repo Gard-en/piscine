@@ -35,9 +35,16 @@ void	ft_putnbr(int nums[])
 	i = 0;
 	while (i < 2)
 	{
-		ft_putchar((nums[i] / 10) % 10 + '0');
-		ft_putchar(nums[i] % 10 + '0');
-		
+		if (nums[i] < 9)
+		{
+			ft_putchar('0');
+			ft_putchar(nums[i] + '0');
+		}
+		else
+		{
+			ft_putchar((nums[i] / 10) % 10 + '0');
+			ft_putchar(nums[i] % 10 + '0');
+		}
 		if (i == 0)
 		{
 			ft_putchar(' ');
@@ -68,7 +75,7 @@ void	ft_print_comb2(void)
 
 	series[0] = 0;
 	series[1] = 0;
-	while (series[0] < 100)
+	while (series[0] <= 98)
 	{
 		ft_putnbr(series);
 		ft_putchar(',');
