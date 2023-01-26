@@ -35,16 +35,9 @@ void	ft_putnbr(int nums[])
 	i = 0;
 	while (i < 2)
 	{
-		if (nums[i] < 9)
-		{
-			ft_putchar('0');
-			ft_putchar(nums[i] + '0');
-		}
-		else
-		{
-			ft_putchar((nums[i] / 10) % 10 + '0');
-			ft_putchar(nums[i] % 10 + '0');
-		}
+		ft_putchar((nums[i] / 10) % 10 + '0');
+		ft_putchar(nums[i] % 10 + '0');
+		
 		if (i == 0)
 		{
 			ft_putchar(' ');

@@ -27,7 +27,7 @@ void	ft_print_combn(int n)
 	char	output[11];
 	int		i;
 
-	if (n < 1 || n > 9)
+	if (!0 < n && n < 10)
 		return ;
 	*output = '0';
 	i = 0;
