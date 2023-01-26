@@ -9,8 +9,6 @@
 /*   Updated: 2023/01/25 09:53:07 by scatches         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
 #include <unistd.h>
 
 void	ft_print_alphabet(void)
