@@ -9,41 +9,51 @@
 /*   Updated: 2023/01/26 12:34:57 by scatches         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
 #include <unistd.h>
 
 /*
 	Start from the right and work your way left
+
+	logic:
 */
 
-void    ft_print_combn(int n)
+void	ft_putchar(char c)
 {
-    char    t[11];
-    int        i;
-
-    if (n < 1 || n > 9)
-        return ;
-    *t = '0';
-    i = 0;
-    while (++i < n)
-        t[i] = t[i - 1] + 1;
-    t[n] = ',';
-    t[n + 1] = ' ';
-    while (*t <= 58 - n)
-    {
-        write(1, t, n + ((*t != 58 - n) ? 2 : 0));
-        i = n;
-        while (i--)
-            if (++t[i] <= 58 - n + i)
-                break ;
-        while (++i > 0 && i < n)
-            t[i] = t[i - 1] + 1;
-    }
+	write(1, &c, sizeof(c));
 }
 
-int main(void)
+void	ft_print_combn(int n)
 {
-	ft_print_combn(2);
-	return (0);
+	char	output[11];
+	int		i;
+
+	if (n < 1 || n > 9)
+		return ;
+	*output = '0';
+	i = 0;
+	while (++i < n)
+		output[i] = output[i - 1] + 1;
+	output[n] = ',';
+	output[n + 1] = ' ';
+	while (*output <= 58 - n)
+	{
+		if (*output != 58 - n)
+			n = n + 0;
+		else
+			n = n + 2;
+		//write(1, output, n);
+		ft_putchar(*output);
+		ft_putchar(' ');
+		i = n;
+		while (i--)
+			if (++output[i] <= 58 - n + i)
+				break ;
+		while (++i > 0 && i < n)
+			output[i] = output[i - 1] + 1;
+	}
+}
+
+int	main(void)
+{
+	ft_print_combn(3);
 }
