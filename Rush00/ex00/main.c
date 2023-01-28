@@ -9,10 +9,10 @@
 /*   Updated: 2023/01/25 12:15:27 by scatches         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-void	rush(int x, int y);
+void	rush(int y, int x);
 
 int	main(void)
 {
-	rush(4, 4);
+	rush(1, 5);
 	return (0);
 }

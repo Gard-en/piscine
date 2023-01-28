@@ -32,7 +32,7 @@ char	ft_getchar(const int row, const int col, const int x, const int y)
 	return (outchar);
 }
 
-void	rush(const int x, const int y)
+void	rush(const int y, const int x)
 {
 	int		row;
 	int		col;
