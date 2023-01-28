@@ -9,8 +9,6 @@
 /*   Updated: 2023/01/25 10:41:32 by scatches         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
 #include <unistd.h>
 
 void	ft_print_numbers(void)

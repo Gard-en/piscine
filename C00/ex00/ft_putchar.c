@@ -9,8 +9,6 @@
 /*   Updated: 2023/01/25 09:31:44 by scatches         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
 #include <unistd.h>
 
 /*We must use STDOUT_FILEN0 from unistd.h when outputting char with write()*/
@@ -22,10 +20,6 @@ void	ft_putchar(char c)
 
 int	main(void)
 {
-	char	c;
-
-	printf("Enter a char:\n");
-	c = scanf("%c", &c);
-	ft_putchar(c);
+	ft_putchar('C');
 	return (0);
 }

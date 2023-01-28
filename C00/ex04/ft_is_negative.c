@@ -9,7 +9,6 @@
 /*   Updated: 2023/01/25 12:01:08 by scatches         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
 #include <unistd.h>
 
 void	ft_is_negative(int n)
