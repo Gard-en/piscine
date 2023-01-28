@@ -23,25 +23,25 @@ char	ft_getchar(const int row, const int col, const int x, const int y)
 
 	if (row == 0 || row == x - 1)
 	{
-		outchar = '*';
+		outchar = 'B';
 		if (col == 0)
 		{
-			outchar = 47;
+			outchar = 'A';
 			if (row == x - 1 && x != 1)
-				outchar = 92;
+				outchar = 'C';
 		}
 		if (col == y - 1 && y != 1)
 		{
-			outchar = 92;
+			outchar = 'C';
 			if (row == x - 1 && x != 1)
-				outchar = 47;
+				outchar = 'A';
 		}
 	}
 	else
 	{
 		outchar = ' ';
 		if (col == 0 || col == y - 1)
-			outchar = '*';
+			outchar = 'B';
 	}
 	return (outchar);
 }

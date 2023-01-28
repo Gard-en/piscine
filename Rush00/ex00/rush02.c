@@ -27,13 +27,13 @@ char	ft_getchar(const int row, const int col, const int x, const int y)
 		if (col == 0)
 		{
 			outchar = 'A';
-			if (row == x - 1)
+			if (row == x - 1 && x != 1)
 				outchar = 'C';
 		}
 		if (col == y - 1)
 		{
 			outchar = 'A';
-			if (row == x - 1)
+			if (row == x - 1 && x != 1)
 				outchar = 'C';
 		}
 	}
