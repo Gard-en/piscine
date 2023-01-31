@@ -18,12 +18,18 @@ void	ft_print_reverse_alphabet(void)
 	ch = 'z' + 1;
 	while (--ch >= 'a')
 	{
+<<<<<<< HEAD
 		write(STDOUT_FILENO, &ch, 1);
+=======
+		write(1, &ch, 1);
+		ch--;
+>>>>>>> 8b2727f9ef306a4a95691dd2dc6f3339b2bd1e11
 	}
 }
-
+/*
 int	main(void)
 {
 	ft_print_reverse_alphabet();
 	return (0);
 }
+*/

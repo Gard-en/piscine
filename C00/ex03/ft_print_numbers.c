@@ -19,13 +19,20 @@ void	ft_print_numbers(void)
 	i = -1;
 	while (++i <= 9)
 	{
+<<<<<<< HEAD
 		intchar = i + 48;
 		write(STDOUT_FILENO, &intchar, 1);
+=======
+		intchar = i + '0';
+		write(1, &intchar, 1);
+		i++;
+>>>>>>> 8b2727f9ef306a4a95691dd2dc6f3339b2bd1e11
 	}
 }
-
+/*
 int	main(void)
 {
 	ft_print_numbers();
 	return (0);
 }
+*/

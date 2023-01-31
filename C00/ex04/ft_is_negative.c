@@ -25,9 +25,10 @@ void	ft_is_negative(int n)
 	}
 	write(1, &output, sizeof(output));
 }
-
+/*
 int	main(void)
 {
 	ft_is_negative('g');
 	return (0);
 }
+*/

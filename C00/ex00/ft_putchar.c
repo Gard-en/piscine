@@ -11,15 +11,15 @@
 /* ************************************************************************** */
 #include <unistd.h>
 
-/*We must use STDOUT_FILEN0 from unistd.h when outputting char with write()*/
-
 void	ft_putchar(char c)
 {
-	write(STDOUT_FILENO, &c, 1);
+	write(1, &c, 1);
 }
-
+/*
 int	main(void)
 {
 	ft_putchar('C');
 	return (0);
 }
+*/
+

@@ -1,49 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: scatches <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/25 15:45:24 by scatches          #+#    #+#             */
-/*   Updated: 2023/01/25 15:45:26 by scatches         ###   ########.fr       */
+/*   Created: 2023/01/30 13:26:29 by scatches          #+#    #+#             */
+/*   Updated: 2023/01/30 13:26:32 by scatches         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
 
-void	ft_putchar(char c)
+void    ft_putchar(char c)
 {
-	write(1, &c, 1);
+    write(1,&c,1);
 }
 
-void	ft_putnbr(int n)
+void    ft_swap(int *a, int *b)
 {
-	if (n == -2147483648)
-	{
-		ft_putchar('-');
-		ft_putchar('2');
-		n = 147483648;
-	}
-	if (n < 0)
-	{
-		ft_putchar('-');
-		n = -n;
-	}
-	if (n >= 10)
-	{
-		ft_putnbr(n / 10);
-		ft_putnbr(n % 10);
-	}
-	else
-	{
-		ft_putchar(n + '0');
-	}
-}
-/*
-int	main(void)
-{
-	ft_putnbr(4766);
-	return (0);
-}
-*/
+    int c;
 
+    c = *a;
+    *a = *b;
+    *b = c;
+}
+
+int main(void)
+{
+    int a;
+    int b;
+
+    a = 1;
+    b = 3;
+    
+    ft_putchar(a + 48);
+    ft_putchar(b + 48);
+    ft_putchar(' ');
+    ft_swap(&a, &b);
+
+    ft_putchar(a + 48);
+    ft_putchar(b + 48);
+    ft_putchar(' ');
+    return (0);
+}

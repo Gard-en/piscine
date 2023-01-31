@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_ft.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: scatches <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/25 15:45:24 by scatches          #+#    #+#             */
-/*   Updated: 2023/01/25 15:45:26 by scatches         ###   ########.fr       */
+/*   Created: 2023/01/27 09:18:46 by scatches          #+#    #+#             */
+/*   Updated: 2023/01/27 09:18:47 by scatches         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
@@ -16,34 +16,32 @@ void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
-void	ft_putnbr(int n)
+void	ft_putnbr(int nb)
 {
-	if (n == -2147483648)
+	if (nb < 0)
 	{
+		nb = -1;
 		ft_putchar('-');
-		ft_putchar('2');
-		n = 147483648;
 	}
-	if (n < 0)
-	{
-		ft_putchar('-');
-		n = -n;
-	}
-	if (n >= 10)
-	{
-		ft_putnbr(n / 10);
-		ft_putnbr(n % 10);
-	}
-	else
-	{
-		ft_putchar(n + '0');
-	}
+	if (nb >= 10)
+		ft_putnbr(nb / 10);
+	ft_putchar(nb % 10 + 48);
 }
-/*
+
+void	ft_ft(int *nbr)
+{
+	*nbr = 42;
+}
+
 int	main(void)
 {
-	ft_putnbr(4766);
-	return (0);
-}
-*/
+	int	n;
+	int	*nbr;
 
+	n = 1;
+	nbr = &n;
+	ft_putnbr(n);
+	ft_ft(nbr);
+	ft_putchar('\n');
+	ft_putnbr(n);
+}
