@@ -16,12 +16,11 @@ void	ft_print_numbers(void)
 	int		i;
 	char	intchar;
 
-	i = 0;
-	while (i <= 9)
+	i = -1;
+	while (++i <= 9)
 	{
-		intchar = i + '0';
+		intchar = i + 48;
 		write(STDOUT_FILENO, &intchar, 1);
-		i++;
 	}
 }
 

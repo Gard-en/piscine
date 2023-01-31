@@ -75,7 +75,7 @@ void	ft_print_comb2(void)
 
 	series[0] = 0;
 	series[1] = 0;
-	while (series[0] <= 98)
+	while (series[0] < 99)
 	{
 		ft_putnbr(series);
 		ft_putchar(',');

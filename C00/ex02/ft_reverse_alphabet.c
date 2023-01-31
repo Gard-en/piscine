@@ -15,11 +15,10 @@ void	ft_print_reverse_alphabet(void)
 {
 	char	ch;
 
-	ch = 'z';
-	while (ch >= 'a')
+	ch = 'z' + 1;
+	while (--ch >= 'a')
 	{
 		write(STDOUT_FILENO, &ch, 1);
-		ch--;
 	}
 }
 

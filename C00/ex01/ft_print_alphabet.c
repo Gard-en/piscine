@@ -15,11 +15,10 @@ void	ft_print_alphabet(void)
 {
 	char	ch;
 
-	ch = 'a';
-	while (ch <= 'z')
+	ch = 'a' - 1;
+	while (++ch <= 'z')
 	{
 		write(STDOUT_FILENO, &ch, 1);
-		ch++;
 	}
 }
 
