@@ -11,6 +11,10 @@
 /* ************************************************************************** */
 #include <unistd.h>
 
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
 void	ft_print_alphabet(void)
 {
 	char	ch;
@@ -18,7 +22,7 @@ void	ft_print_alphabet(void)
 	ch = 'a';
 	while (ch <= 'z')
 	{
-		write(STDOUT_FILENO, &ch, 1);
+		ft_putchar(ch);
 		ch++;
 	}
 }
@@ -29,3 +33,4 @@ int	main(void)
 	return (0);
 }
 */
+

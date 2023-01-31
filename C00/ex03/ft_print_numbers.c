@@ -20,7 +20,7 @@ void	ft_print_numbers(void)
 	while (i <= 9)
 	{
 		intchar = i + '0';
-		write(STDOUT_FILENO, &intchar, 1);
+		write(1, &intchar, 1);
 		i++;
 	}
 }

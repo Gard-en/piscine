@@ -30,7 +30,6 @@ void	ft_putchar(char c)
 void	ft_putnbr(int nums[])
 {
 	int		i;
-	char	output[2];
 
 	i = 0;
 	while (i < 2)
@@ -71,7 +70,6 @@ void	ft_putnbr(int nums[])
 void	ft_print_comb2(void)
 {
 	int		series[2];
-	char	output[6];
 
 	series[0] = 0;
 	series[1] = 0;
