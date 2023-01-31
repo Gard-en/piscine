@@ -18,4 +18,4 @@
 # Usage: bash path/to/midLS 
 #
 #########################################
-ls -ptm
+ls -trhpm

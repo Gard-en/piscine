@@ -22,9 +22,10 @@ void	ft_print_reverse_alphabet(void)
 		ch--;
 	}
 }
-
+/*
 int	main(void)
 {
 	ft_print_reverse_alphabet();
 	return (0);
 }
+*/

@@ -23,7 +23,7 @@ void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
-void ft_putarray(char output[], int n)
+void	ft_putarray(char output[], int n)
 {
 	write(1, output, n);
 }
@@ -45,11 +45,9 @@ void	ft_print_combn(int n)
 			n = n + 0;
 		else
 			n = n + 2;
-		
 		ft_putarray(output, n);
 		ft_putchar(',');
 		ft_putchar(' ');
-
 		i = n;
 		while (i--)
 			if (++output[i] <= 58 - n + i)
@@ -58,8 +56,9 @@ void	ft_print_combn(int n)
 			output[i] = output[i - 1] + 1;
 	}
 }
-
+/*
 int	main(void)
 {
 	ft_print_combn(2);
 }
+*/
