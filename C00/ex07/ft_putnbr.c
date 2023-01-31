@@ -39,10 +39,11 @@ void	ft_putnbr(int n)
 		ft_putchar(n + '0');
 	}
 }
-
+/*
 int	main(void)
 {
 	ft_putnbr(4766);
 	return (0);
 }
+*/
 
