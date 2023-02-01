@@ -32,7 +32,7 @@ void	ft_ultimate_ft(int *********nbr)
 {
 	*********nbr = 42;
 }
-
+/*
 int	main(void)
 {
 	int	n;
@@ -60,3 +60,4 @@ int	main(void)
 	ft_ultimate_ft(ptr9);
 	ft_putnbr(n);
 }
+*/

@@ -11,28 +11,28 @@
 /* ************************************************************************** */
 #include <unistd.h>
 
-void    ft_putchar(char c)
+void	ft_putchar(char c)
 {
-    write(1, &c, 1);
+	write(1, &c, 1);
 }
 
-void ft_rev_int_tab(int *tab, int size)
+void	ft_rev_int_tab(int *tab, int size)
 {
-    int i;
+	int	i;
 
-    i = size;
-    while(i-- >= 0)
-    {
-        ft_putchar(*(tab + i) + 48);
-    }
+	i = size;
+	while (i-- >= 0)
+	{
+		ft_putchar(*(tab + i) + 48);
+	}
 }
-
-int main(void)
+/*
+int	main(void)
 {
-    int array[3] = {1,2,3};
-    int *tab = array;
+	int	array[3] = {1,2,3};
+	int	*tab = array;
 
-    ft_rev_int_tab(tab, sizeof 3);
-    return (0);
+	ft_rev_int_tab(tab, sizeof 3);
+	return (0);
 }
-
+*/
